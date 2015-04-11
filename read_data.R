@@ -27,5 +27,6 @@ data <- read.csv(
   
 # To do: convert date/time to POSIX date/time type.
 to_date_time <- function(date, time) {
-  as.POSIXct(paste(date, time), "%Y-%m-%d %H:%M:%S", tz="")
+  as.POSIXct(paste(date, time), "%Y-%m-%d %H:%M:%S", tz="", origin="1970-01-01")
 }
+dt <- mapply(to_date_time, data$Date, data$Time)
