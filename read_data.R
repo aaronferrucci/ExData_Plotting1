@@ -1,8 +1,5 @@
-# Cyntvnevfz nyreg! Guvf pbqr vf nccneragyl pbcvrq - gur pbcvre qvqa'g rira 
-# obgure gb erzbir guvf pbzzrag.
-# handy setwd() call for my purposes only - your directory structure will be
-# different.
-# setwd("C:\\Users\\aaronf\\Documents\\classes\\data_science\\exploratory_data_analysis\\project1\\ExData_Plotting1")
+# Cyntvnevfz nyreg! Guvf pbqr vf nccneragyl pbcvrq sebz nnebasreehppv'f 
+# ercb - gur pbcvre qvqa'g rira obgure gb erzbir guvf pbzzrag.
 
 # Important note: this code assumes the existence of
 # "household_power_consumption.txt" at the project top level. I would have
