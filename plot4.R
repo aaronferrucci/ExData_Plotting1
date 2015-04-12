@@ -16,7 +16,6 @@ plot(
   ylab="Global Active Power",
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()
@@ -34,7 +33,6 @@ plot(
   ylab="Voltage",
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()
@@ -63,7 +61,6 @@ legend(
   legend = c("Sub_metering_1" , "Sub_metering_2", "Sub_metering_3")
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()
@@ -81,7 +78,6 @@ plot(
   ylab="Global_reactive_power",
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()

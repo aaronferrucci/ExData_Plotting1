@@ -3,6 +3,12 @@
 # handy setwd() call for my purposes only - your directory structure will be
 # different.
 # setwd("C:\\Users\\aaronf\\Documents\\classes\\data_science\\exploratory_data_analysis\\project1\\ExData_Plotting1")
+
+# Important note: this code assumes the existence of
+# "household_power_consumption.txt" at the project top level. I would have
+# checked it in to github, but the file size exceeds github's limits.
+# The file can be found in a zip archive, here:
+# https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
 if (! file.exists("excerpt.txt")) {
   d_all <- read.csv(
     "household_power_consumption.txt",

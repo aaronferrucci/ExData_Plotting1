@@ -13,7 +13,6 @@ plot(
   ylab="Global Active Power (kilowatts)",
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()

@@ -23,7 +23,6 @@ legend(
   legend = c("Sub_metering_1" , "Sub_metering_2", "Sub_metering_3")
 )
 
-labels <- lapply(ticks, make_labels)
 axis(1, 
   at=get_ticks(),
   labels=get_labels()
