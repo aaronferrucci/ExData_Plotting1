@@ -10,6 +10,11 @@
 # The file can be found in a zip archive, here:
 # https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
 if (! file.exists("excerpt.txt")) {
+  if (! file.exists("household_power_consumption.txt")) {
+    stop("Sorry, household_power_consumption.txt does not exist.
+  Please download it and try again:
+  https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip")
+  }
   d_all <- read.csv(
     "household_power_consumption.txt",
     sep=";",
