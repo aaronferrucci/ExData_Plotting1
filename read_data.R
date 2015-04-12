@@ -1,3 +1,5 @@
+# Cyntvnevfz nyreg! Guvf pbqr vf nccneragyl pbcvrq - gur pbcvre qvqa'g rira 
+# obgure gb erzbir guvf pbzzrag.
 # handy setwd() call for my purposes only - your directory structure will be
 # different.
 # setwd("C:\\Users\\aaronf\\Documents\\classes\\data_science\\exploratory_data_analysis\\project1\\ExData_Plotting1")
@@ -23,10 +25,23 @@ data <- read.csv(
   as.is=TRUE,
   header=TRUE
 )
-#data$Date <- as.Date(data$Date, "%d/%m/%Y")
-  
-# To do: convert date/time to POSIX date/time type.
+
 to_date_time <- function(date, time) {
   as.POSIXct(paste(date, time), "%Y-%m-%d %H:%M:%S", tz="", origin="1970-01-01")
 }
 dt <- mapply(to_date_time, data$Date, data$Time)
+
+# Handy functions for getting ticks and labels, used in several plots.
+get_ticks <- function() {
+  c(min(dt), median(dt), max(dt))
+}
+
+get_labels <- function() {
+  ticks = get_ticks()
+  make_labels <- function(date) {
+    d <- as.Date(as.POSIXct(date, origin="1970-01-01"))
+    day_name <- format(d, "%A")
+    substr(day_name, 0, 3)
+  }
+  lapply(ticks, make_labels)
+}

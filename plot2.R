@@ -12,18 +12,11 @@ plot(
   xaxt="n",
   ylab="Global Active Power (kilowatts)",
 )
-ticks <- c(min(dt), median(dt), max(dt))
-make_labels <- function(date) {
-  d <- as.Date(as.POSIXct(date, origin="1970-01-01"))
-  day_name <- format(d, "%A")
-  short_name <- substr(day_name, 0, 3)
-  short_name
-}
 
 labels <- lapply(ticks, make_labels)
 axis(1, 
-  at=ticks,
-  labels=labels
+  at=get_ticks(),
+  labels=get_labels()
 )
 dev.off()
 
