@@ -1,9 +1,9 @@
 source("read_data.R")
+png("plot2.png")
 par(
   bg="transparent"
 )
 
-png("plot2.png")
 plot(
   dt,
   data$Global_active_power,

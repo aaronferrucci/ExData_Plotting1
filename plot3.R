@@ -1,9 +1,9 @@
 source("read_data.R")
+png("plot3.png")
 par(
   bg="transparent"
 )
 
-png("plot3.png")
 plot(
   dt,
   data$Sub_metering_1,

@@ -1,8 +1,8 @@
 source("read_data.R")
+png("plot1.png")
 par(
   bg="transparent"
 )
-png("plot1.png")
 hist(
   main="Global Active Power",
   xlab="Global Active Power (kilowatts)",
